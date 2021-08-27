@@ -1,19 +1,20 @@
 .bakershops {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
 
   background-color: $cream;
 
   &__title {
-    margin: 40px 0 80px;
+    margin: 20px 0;
   }
 
   &__actions {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
   }
 
   &__button {
@@ -34,7 +35,7 @@
       width: 170px;
     }
 
-    &--adress {
+    &--address {
       width: 320px;
     }
   }
@@ -42,6 +43,8 @@
   &__image {
     margin-bottom: 60px;
     object-fit: contain;
+
+    width: 600px;
   }
 
   &__size-changer {
@@ -75,7 +78,7 @@
 
   @include fullHD {
     &__title {
-      margin: 60px 0 80px;
+      margin: 50px 0 30px;
     }
 
     &__button {
@@ -89,24 +92,24 @@
         width: 220px;
       }
 
-      &--adress {
+      &--address {
         width: 400px;
       }
     }
 
     &__actions {
-      margin-bottom: 90px;
+      margin-bottom: 70px;
       gap: 40px;
     }
 
     &__image {
-      width: 1140px;
+      width: 900px;
     }
   }
 
   @include large {
     &__title {
-      margin: 80px 0 100px;
+      margin: 60px 0;
     }
 
     &__button {
@@ -120,24 +123,30 @@
         width: 265px;
       }
 
-      &--adress {
+      &--address {
         width: 500px;
       }
     }
 
     &__actions {
-      margin-bottom: 90px;
+      margin-bottom: 80px;
       gap: 60px;
     }
 
     &__image {
-      width: 1440px;
+      width: 1100px;
     }
   }
 
   @include laptop {
     &__image {
-      width: 900px;
+      width: 600px;
+    }
+  }
+
+  @media (max-width: 1368px) and (min-height: 1026px) {
+    &__image {
+      width: 1000px;
     }
   }
 
@@ -157,13 +166,13 @@
         width: 140px;
       }
 
-      &--adress {
+      &--address {
         width: 260px;
       }
     }
 
     &__actions {
-      margin-bottom: 50px;
+      margin-bottom: 100px;
       gap: 20px;
     }
 
@@ -172,13 +181,28 @@
     }
   }
 
+  @include tablet-landscape {
+    &__title {
+      margin: 40px 0;
+    }
+
+    &__actions {
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      width: 600px;
+    }
+  }
+
   @media (max-width: 768px) {
     &__actions {
+      margin-bottom: 40px;
       flex-direction: column;
     }
 
     &__image {
-      width: 500px;
+      width: 460px;
     }
 
     &__select {
@@ -212,8 +236,29 @@
     }
   }
 
-  @media (max-width: 280px) {
+  @include phone-landscape {
+    & {
+      height: min-content;
+    }
+  }
+
+  @media (max-height: 650px) and (max-width: 400px) {
+    &__actions {
+      margin-bottom: 40px;
+    }
+
     &__image {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 280px) {
+    &__actions {
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      margin-bottom: 40px;
       width: 276px;
     }
   }

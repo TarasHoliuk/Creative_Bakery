@@ -40,3 +40,9 @@
     @content;
   }
 }
+
+@mixin tablet-landscape {
+  @media (max-width: 1040px) and (orientation: landscape) {
+    @content;
+  }
+}

@@ -369,9 +369,9 @@
           </select>
 
           <select
-            name="adress"
-            id="adress"
-            class="bakershops__select bakershops__select--adress"
+            name="address"
+            id="address"
+            class="bakershops__select bakershops__select--address"
             required
           >
             <option
@@ -379,7 +379,7 @@
               disabled
               selected
             >
-              Adress
+              Address
             </option>
             <option value="Kyiv, Holosiivska St, 53">
               Holosiivska St, 53
@@ -610,13 +610,12 @@
                 required
                 placeholder="Phone*"
               >
-              <input
-                type="text"
+              <textarea
                 name="message"
                 class="contacts__input"
                 required
                 placeholder="Message*"
-              >
+             ></textarea>
 
               <button class="button contacts__button">
                 Send
